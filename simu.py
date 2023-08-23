@@ -13,11 +13,11 @@ def damage_line(cribase,min,max,mincri,maxcri,elem,do,carac_l,carac_d,mel,dofin=
 
     if ar:    
         if rng_cri > (carac_l["cri"]+cribase):
-            return (((((((((random.randint(min, max)*(100+carac_l[elem]+carac_l["pui"]))/100)+carac_l[do]+carac_l["do"])*(100+carac_l[type_do])*(100+carac_l["doar"]))/(100*100))*(100+dofin))/100) - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4))
+            return (((random.randint(min, max)*((100+carac_l[elem]+carac_l["pui"])/100)+carac_l[do]+carac_l["do"])*((100+carac_l[type_do])/100)*((100+carac_l["doar"])/100)*((100+dofin)/100)) - carac_d["re"+elem]) * ((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4)
         else:
             #print("Critique !")
             pou = pou + pousupcri
-            return (((((((((random.randint(mincri, maxcri)*(100+carac_l[elem]+carac_l["pui"]))/100)+carac_l[do]+carac_l["docri"]+carac_l["do"])*(100+carac_l[type_do])*(100+carac_l["doar"]))/(100*100))*(100+dofin))/100) - carac_d["recri"] - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4))
+            return (((random.randint(mincri, maxcri)*((100+carac_l[elem]+carac_l["pui"])/100)+carac_l[do]+carac_l["docri"]+carac_l["do"])*((100+carac_l[type_do])/100)*((100+carac_l["doar"])/100)*((100+dofin)/100)) - carac_d["recri"] - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4)
 
     else:
         if (rng_cri < (carac_l["cri"]+cribase)) and (cribase >= 0):  
@@ -25,15 +25,15 @@ def damage_line(cribase,min,max,mincri,maxcri,elem,do,carac_l,carac_d,mel,dofin=
             #print("Critique !")
             pou = pou + pousupcri
             if min == max == mincri == maxcri == 0:
-               return (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4)
+               return ((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4
             else :
-                return (((((((((random.randint(mincri, maxcri)*(100+carac_l[elem]+carac_l["pui"]))/100)+carac_l[do]+carac_l["docri"]+carac_l["do"])*(100+carac_l[type_do])*(100+carac_l["doso"]))/(100*100))*(100+dofin))/100) - carac_d["recri"] - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4))      
+                return (((random.randint(mincri, maxcri)*((100+carac_l[elem]+carac_l["pui"])/100)+carac_l[do]+carac_l["docri"]+carac_l["do"])*((100+carac_l[type_do])/100)*((100+carac_l["doso"])/100)*((100+dofin)/100)) - carac_d["recri"] - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4)   
         
         else:
             if min == max == mincri == maxcri == 0:
                return (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4)
             else :
-                return (((((((((random.randint(min, max)*(100+carac_l[elem]+carac_l["pui"]))/100)+carac_l[do]+carac_l["do"])*(100+carac_l[type_do])*(100+carac_l["doso"]))/(100*100))*(100+dofin))/100) - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4))
+                return (((random.randint(min, max)*((100+carac_l[elem]+carac_l["pui"])/100)+carac_l[do]+carac_l["do"])*((100+carac_l[type_do])/100)*((100+carac_l["doso"])/100)*((100+dofin)/100)) - carac_d["re"+elem])*((100-carac_d["reper"+elem])/100)*((100-carac_d[type_re])/100)*((100-dore)/100) + (((carac_l["lv"]/2)+(carac_l["dopou"]-carac_d["repou"]+32))*pou/4)
 
 def soin():
     pass
